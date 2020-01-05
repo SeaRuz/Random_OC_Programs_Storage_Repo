@@ -1,5 +1,8 @@
 senders = {}
 recievers = {}
+
+computer=require("computer")
+component=require("component")
 ncard=component.proxy(component.list("gpu")()) or nil
 if not ncard then computer.shutdown(true) end
 function processMessage(_, _, from, port, _,...)
