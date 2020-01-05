@@ -5,6 +5,7 @@ ports = {8080}
 computer=require("computer")
 component=require("component")
 ncard=component.proxy(component.list("gpu")()) or nil
+print(ncard)
 if not ncard then computer.shutdown(true) end
 for i=1,#ports do ncard.open(ports[i]) end
 
